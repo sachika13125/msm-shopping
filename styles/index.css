@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+body {
+    background-color: #fffffe;
+    width: 100%;
+}
+header {
+    background-color: #272343;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+}
+.name {
+    color: #fffffe;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.login-form {
+    background-color: #fffffe;
+    color: #272343;
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.login-form:hover{
+    background-color: #ffd803;
+    color: #272343;
+}
+footer{
+    background-color: #272343;
+    padding: 3%;
+}
+footer p{
+    color: #fffffe;
+    text-align: center;
+}
+@media (min-width: 300px){
+    .form-validation{
+        margin: 0 auto;
+    }
+    .form-validation h1{
+        width: max-content;
+        margin: 0 auto;
+        margin-top: 10vh;
+    }
+    .form-validation > .form {
+        width: 40%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5vh;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        border: 5px solid #272343;
+        border-radius: 4px;
+    }
+    .form-validation button {
+        border: none;
+        background-color: #fffffe;
+        padding: .5rem 1rem;
+        width: max-content;
+        font-size: 1rem;
+        border: 2px solid #272343;
+        border-radius: 4px;
+    }
+    .form-validation button:hover {
+        background-color: #ffd803;
+        color: #272343;
+        cursor: pointer;
+    }
+    .form-validation div{
+        /* background-color: darkkhaki; */
+        display: flex;
+        flex-direction: column;
+        row-gap: 4vh;
+    }
+    .form-validation aside {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2vh;
+    }
+    .form-validation input {
+        width: 60%;
+        height: 5%;
+        border: 1px solid #272343;
+        background-color: white;
+        padding-left: 2%;
+        font-size: 10px;
+
+    }
+    .form-validation label {
+        font-size: 15px;
+        font-weight: 600;
+    }    
+}
+@media(min-width: 750px) {
+    .form-validation > .form {
+        width: 60%;
+        padding-top: 8%;
+        padding-bottom: 8%;
+    }
+    .form-validation button {
+        padding: 2%;
+        width: 12vw;
+        font-size: 20px;
+    }
+    .form-validation label {
+        font-size: 20px;
+    }  
+    .form-validation input {
+        width: 40vw;
+        height: 5vh;
+    }
+}
+@media(min-width: 1200px){
+    .form-validation > .form {
+        width: 40%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .form-validation button {
+        padding: 2%;
+        width: 10vw;
+        font-size: 20px;
+    }
+    .form-validation label {
+        font-size: 20px;
+    }  
+    .form-validation input {
+        width: 30vw;
+        height: 5vh;
+    }
+
+}
