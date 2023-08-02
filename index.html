@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- jQuery 3.7.0 slim minified package -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <!-- css file -->
     <link rel="stylesheet" href="styles/index.css">
+    <!-- title -->
+    <title>Document</title>
+
 </head>
 <body>
     <header>
         <a class="name" href="index.html">MSM</a>
         <a class="login-form" href="index.html">LOGIN</a>
     </header>
-    <div class="mia-part">
+    <div class="form-validation">
+        <h1>Login</h1>
+        <form action="shopping.html" class="form" id="loginForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+    </div>
+
+    <!-- <div class="mia-part">
         <div class="form-validation">
             <h1>Log In</h1>
             <form action="shopping.html" class="form" id="loginForm">
@@ -28,12 +51,13 @@
                 <button type="submit" class="login">Login</button>
             </form>
         </div>    
-    </div>
+    </div> -->
 
     <footer>
         <p>Designed By MAYA & SACHIKA & MIA</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

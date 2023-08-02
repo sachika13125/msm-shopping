@@ -85,11 +85,6 @@ footer p{
         flex-direction: column;
         row-gap: 4vh;
     }
-    .form-validation aside {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2vh;
-    }
     .form-validation input {
         width: 60%;
         height: 5%;
