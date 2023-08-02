@@ -20,13 +20,13 @@ function contentPosition() {
       content.css("left", pinLeft - content.outerWidth() / 2 + extraLeft + "px");
       content.css("top", pin.position().top + 30 + "px");
     } else if (pinLeft < content.outerWidth() / 2) {
-      content.css("left", -$(".container").offset().left + "px");
+      content.css("left", -$(".container").offset().left +"px");
       content.css("top", pin.position().top + 30 + "px");
     } else {
       content.css("left", pinLeft - content.outerWidth() / 2 + "px");
       content.css("top", pin.position().top + 30 + "px");
     }
-    arrow.css("left", pinLeft - content.offset().left + pin.outerWidth() / 2 + "px");
+    arrow.css("left", pinLeft - content.offset().left + pin.outerWidth() / 2 +70+"px");
   });
 }
 
