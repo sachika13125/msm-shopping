@@ -32,7 +32,7 @@ function contentPosition() {
 
 // Creating hover effect
 $(".all-tooltip .tooltip").each(function() {
-    // const tooltip = $(this);
+    const tooltip = $(this);
     const pin = tooltip.find(".pin");
     const content = tooltip.find(".tooltip-content");
 
@@ -69,9 +69,9 @@ class Products {
 
 const products= [
     new Products('Ramp','$200','https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80'),
-    new Products('Couch','$500','./img/couch.webp'),
-    new Products('Plant','$50','./img/roomplant.webp'),
-    new Products('White Door','$300','./img/door.webp'),
+    new Products('Couch','$500','./imgs/couch.webp'),
+    new Products('Plant','$50','./imgs/roomplant.webp'),
+    new Products('White Door','$300','./imgs/door.webp'),
 ];
 
 products.forEach(function(product, i) {
