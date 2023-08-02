@@ -5,6 +5,31 @@ let timeoutId;
 $(window).on("resize", contentPosition);
 $(window).on("DOMContentLoaded", contentPosition);
 
+//setting the position of tooltips
+function contentPosition() {
+  $(".all-tooltip .tooltip").each(function() {
+    const tooltip = $(this);
+    const pin = tooltip.find(".pin");
+    const content = tooltip.find(".tooltip-content");
+    const arrow = tooltip.find(".arrow");
+    const pinLeft = pin.position().left;
+
+    if (pinLeft + content.outerWidth() / 2 > $(".container").outerWidth()) {
+      const extraLeft =
+        $(".container").outerWidth() - (pinLeft + content.outerWidth() / 2);
+      content.css("left", pinLeft - content.outerWidth() / 2 + extraLeft + "px");
+      content.css("top", pin.position().top + 30 + "px");
+    } else if (pinLeft < content.outerWidth() / 2) {
+      content.css("left", -$(".container").offset().left + "px");
+      content.css("top", pin.position().top + 30 + "px");
+    } else {
+      content.css("left", pinLeft - content.outerWidth() / 2 + "px");
+      content.css("top", pin.position().top + 30 + "px");
+    }
+    arrow.css("left", pinLeft - content.offset().left + pin.outerWidth() / 2 + "px");
+  });
+}
+
 // Creating hover effect
 $(".all-tooltip .tooltip").each(function() {
     // const tooltip = $(this);
