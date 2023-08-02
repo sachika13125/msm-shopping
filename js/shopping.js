@@ -78,4 +78,60 @@ products.forEach(function(product, i) {
     $('.content h1').eq(i).html(product.name);
     $('.content p').eq(i).html(product.price);
     $('.tooltip-content img').eq(i).attr('src', product.img);
+<<<<<<< HEAD
+=======
+});
+
+
+
+const cart = [];
+
+// Function to add items to cart
+function addToCart(name, price) {
+  cart.push({ name, price });
+  updateCart();
+  return;
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// Function to update cart contents
+function updateCart() {
+  const cartList = $("#cartList");
+  cartList.empty(); // Clear the list of products in the cart
+
+  let totalPrice = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    const cartItem = cart[i];
+    const listItem = $("<div>").addClass("cart-item").html(`
+        <img src="" alt="">
+        <h3>${cartItem.name}</h3>
+        <p>$${cartItem.price}</p>
+        <button class="removeBtn" data-index="${i}">Remove</button>
+    `);
+    cartList.append(listItem); // Add to the list of products in your cart
+
+    totalPrice += parseFloat(cartItem.price); // Convert prices to floating point numbers and add to total
+  }
+
+  // dispay the sum
+  const totalPriceElement = $("<p>").addClass("total-price").text("Total Price: $" + totalPrice.toFixed(2));
+  cartList.append(totalPriceElement);
+}
+
+// Event handler for "Add to Cart" button
+$("#addToCartBtn").click(function() {
+  addToCart("Item Name", 10); // Change the item name and price as needed
+});
+
+// Event delegation for "Remove" button
+$(document).on("click", ".removeBtn", function() {
+  const indexToRemove = $(this).data("index");
+  removeFromCart(indexToRemove);
+>>>>>>> maya
 });
