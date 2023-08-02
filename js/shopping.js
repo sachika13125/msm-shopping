@@ -78,8 +78,6 @@ products.forEach(function(product, i) {
     $('.content h1').eq(i).html(product.name);
     $('.content p').eq(i).html(product.price);
     $('.tooltip-content img').eq(i).attr('src', product.img);
-<<<<<<< HEAD
-=======
 });
 
 
@@ -133,5 +131,4 @@ $("#addToCartBtn").click(function() {
 $(document).on("click", ".removeBtn", function() {
   const indexToRemove = $(this).data("index");
   removeFromCart(indexToRemove);
->>>>>>> maya
 });
