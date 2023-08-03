@@ -26,7 +26,7 @@ function contentPosition() {
       content.css("left", pinLeft - content.outerWidth() / 2 + "px");
       content.css("top", pin.position().top + 30 + "px");
     }
-    arrow.css("left", pinLeft - content.offset().left + pin.outerWidth() / 2 +70+"px");
+    arrow.css("left", pinLeft - content.offset().left + pin.outerWidth() / 2 +"px");
   });
 }
 
