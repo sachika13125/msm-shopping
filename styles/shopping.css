@@ -50,53 +50,37 @@ footer p{
 section {
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   overflow-x: hidden;
 }
 .container {
   width: 60%;
-  max-width: 1200px;
-  position: relative;
 }
 .my-img {
-  height: auto;
   width: 1000px;
   padding: 70px;
 }
 .all-tooltip {
-  position: absolute;
-  height: 100%;
   width: 100%;
   left: 0;
-  top: 0;
 }
 
 .tooltip-content {
-  position: absolute;
   background-color: #fffffe;
   box-shadow: 0px 0px 20px #00000020;
-  padding: 30px;
   border-radius: 8px;
   width: 70vw;
   max-width: 300px;
   opacity: 0;
   pointer-events: none;
-  z-index: 2;
 }
 .tooltip-content .arrow {
-  position: absolute;
   width: 10px;
-  height: 10px;
   border: 10px solid transparent;
   border-bottom-color: #fffffe;
-  top: 0px;
   left: 50%;
   transform: translate(-50%, -100%) rotate(0deg);
 }
 .pin {
-  position: absolute;
   content: "";
   top: 50%;
   left: 80%;
@@ -107,7 +91,6 @@ section {
 }
 .pin:after {
   content: "";
-  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -119,7 +102,6 @@ section {
 .tooltip.active .tooltip-content {
   opacity: 1;
   pointer-events: all;
-  display: block;
 }
 
 .tooltip .tooltip-content {
@@ -141,7 +123,6 @@ section {
   background-color: #fffffe;
   color: #272343;
   padding: 10px;
-  cursor: pointer;
   margin-top: 20px;
   border-radius: 4px;
   box-shadow: 0px 0px 20px #00000020;
@@ -154,17 +135,13 @@ section {
 /* Custom Style for tooltip-1 */
 
 .tooltip-1 .pin {
-  top: 40%;
-  left: 70%;
+  top: 43%;
+  left: 65%;
   height: 15px;
   width: 15px;
   background-color: #fffffe;
 }
 .tooltip-1 .tooltip-content {
-  display: flex;
-  max-width: 500px;
-  align-items: stretch;
-  justify-content: center;
   padding: 0;
   background-color: #fffffe;
 }
@@ -184,7 +161,7 @@ section {
 /* custom style for tooltip-2 */
 
 .tooltip-2 .pin {
-  top: 75%;
+  top: 77%;
   left: 40%;
   height: 15px;
   width: 15px;
@@ -194,7 +171,7 @@ section {
 
 .tooltip-3 .pin {
   top: 40%;
-  left: 25%;
+  left: 23%;
   height: 15px;
   width: 15px;
 }
