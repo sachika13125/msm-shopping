@@ -81,21 +81,23 @@ products.forEach(function(product, i) {
 });
 
 
-
 const cart = [];
 
-// Function to add items to cart
-function addToCart(name, price) {
-  cart.push({ name, price });
+// Event handler for "Add to Cart" button
+$(".addToCartBtn").click(function() {
+  const itemname = $(this).data("name"); // Get the item name from the data-name attribute
+  const price = $(this).data("price"); // Get the price from the data-price attribute
+  cart.push({ itemname, price });
   updateCart();
-  return;
-}
+});
 
-// Function to remove an item from the cart
-function removeFromCart(index) {
-  cart.splice(index, 1);
+
+// Event delegation for "Remove" button
+$(document).on("click", ".removeBtn", function() {
+  const indexToRemove = $(this).data("index");
+  cart.splice(indexToRemove, 1);
   updateCart();
-}
+});
 
 // Function to update cart contents
 function updateCart() {
@@ -108,7 +110,7 @@ function updateCart() {
     const cartItem = cart[i];
     const listItem = $("<div>").addClass("cart-item").html(`
         <img src="" alt="">
-        <h3>${cartItem.name}</h3>
+        <h3>${cartItem.itemname}</h3>
         <p>$${cartItem.price}</p>
         <button class="removeBtn" data-index="${i}">Remove</button>
     `);
@@ -121,14 +123,3 @@ function updateCart() {
   const totalPriceElement = $("<p>").addClass("total-price").text("Total Price: $" + totalPrice.toFixed(2));
   cartList.append(totalPriceElement);
 }
-
-// Event handler for "Add to Cart" button
-$("#addToCartBtn").click(function() {
-  addToCart("Item Name", 10); // Change the item name and price as needed
-});
-
-// Event delegation for "Remove" button
-$(document).on("click", ".removeBtn", function() {
-  const indexToRemove = $(this).data("index");
-  removeFromCart(indexToRemove);
-});
