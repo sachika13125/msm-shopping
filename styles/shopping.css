@@ -101,7 +101,6 @@ section {
   width: 25px;
   background-color: #fffffe;
   border-radius: 50%;
-  cursor: pointer;
 }
 .pin:after {
   content: "";
