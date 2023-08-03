@@ -44,6 +44,9 @@ footer p{
   color: #fffffe;
   text-align: center;
 }
+.bg-my-color{
+  background-color: #272343;
+}
 section {
   height: 100vh;
   width: 100%;
