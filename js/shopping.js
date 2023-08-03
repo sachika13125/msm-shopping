@@ -75,15 +75,9 @@ const products= [
 ];
 
 products.forEach(function(product, i) {
-<<<<<<< HEAD
   $('.content h1').eq(i).html(product.name);
   $('.content p').eq(i).html(product.price);
   $('.tooltip-content img').eq(i).attr('src', product.img);
-=======
-    $('.content h1').eq(i).html(product.name);
-    $('.content p').eq(i).html(product.price);
-    $('.tooltip-content img').eq(i).attr('src', product.img);
->>>>>>> 897edd5c1789b36610ba16977b98dc49c3e6e116
 });
 
 
